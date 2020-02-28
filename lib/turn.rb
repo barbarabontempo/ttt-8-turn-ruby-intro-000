@@ -11,7 +11,7 @@ def display_board(the_board)
 end
 puts "Welcome to Tic Tac Toe"
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-display_board(board)
+
 
 #this converts the user input to an integer
 def input_to_index(user_input) #this method takes one argument (the users input)
@@ -23,17 +23,18 @@ def move(board, index, character = "X") #this method takes on 3 arguments
   board[index] = character #this will take the board array and place the character X onto the index
 end
 
+#is this a valid move?
 def valid_move?(board, index)
   def position_taken?(array, ind)
-    if array[ind] == " " || array[ind] == "" || array[ind] == nil
+    if array[ind] == " " || array[ind] == "" || array[ind] == nil #if the array is empty, we turn false
       return false
     else
       return true
     end
   end
-
+#is the user putting an appropriate number to play ex: 1-9
   def available_on_board?(num)
-  if num.between?(0, 8) == true
+  if num.between?(0, 8) == true #if the number is between
     return true
   else
     return false
