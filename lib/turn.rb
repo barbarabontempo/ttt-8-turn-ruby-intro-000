@@ -12,3 +12,12 @@ end
 puts "Welcome to Tic Tac Toe"
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 display_board(board)
+
+def input_to_index(user_input)
+  new_user_input = user_input.to_i
+  new_user_input -= 1
+end
+
+def move(board, index, character = "X")
+  board[index] = character
+end
