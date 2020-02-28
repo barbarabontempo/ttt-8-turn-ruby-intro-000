@@ -9,7 +9,6 @@ def display_board(the_board)
   puts "-----------"
   puts " #{the_board[6]} | #{the_board[7]} | #{the_board[8]} "
 end
-puts "Welcome to Tic Tac Toe"
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
 
